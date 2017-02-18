@@ -72,7 +72,7 @@ public class Playstate extends State implements Screen{
         update(Gdx.graphics.getDeltaTime());
         b2dr.render(world, cam.combined);
         batch.setProjectionMatrix(cam.combined); //Idk if this is necessary since the b2dr is also set to cam.combined
-        batch.draw(background, 0, 0);
+        batch.draw(background, 0, 0);//comment
         System.out.println("BACKGROUND DRAWN");
     }
 
