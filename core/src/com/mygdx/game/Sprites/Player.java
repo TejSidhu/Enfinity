@@ -30,14 +30,24 @@ public class Player {
         //Creates the body
         playerBody = world.createBody(playerDef);
         playerBody.createFixture(fixtureDefPlayer);
-        //world.createBody(playerDef).createFixture(fixtureDefPlayer);
 
     }
-    public void update(float delta){
-
+    //Neat af code
+    //Get on my level
+    public void goLeft() {
+        playerBody.applyLinearImpulse(new Vector2(-5f, 0),playerBody.getWorldCenter(), true);
     }
-    public void render(){
-
+    public void goRight(){
+        playerBody.applyLinearImpulse(new Vector2(5f, 0),playerBody.getWorldCenter(), true);
+    }
+    public void goUp(){
+        playerBody.applyLinearImpulse(new Vector2(0, 50f),playerBody.getWorldCenter(), true);
+    }
+    public void goDown(){
+        playerBody.applyLinearImpulse(new Vector2(0, -50f),playerBody.getWorldCenter(), true);
+    }
+    public void goNowhere(){
+        playerBody.setLinearVelocity(0, 0);
     }
     public void dispose(){
         playerShape.dispose();

@@ -17,6 +17,7 @@ public class Terrain {
         this.world = world;
         initTerrain();
     }
+    //Sexy code everywhere
 
     public void initTerrain() {
 
@@ -26,7 +27,7 @@ public class Terrain {
         groundDef.position.set(0,0);
         //Shape
         groundShape = new ChainShape();
-        groundShape.createChain(new Vector2[]{new Vector2(-200, 60), new Vector2(500, 60)});
+        groundShape.createChain(new Vector2[]{new Vector2(-200, 0), new Vector2(500, 0)});
         //Fixture
         groundFixDef = new FixtureDef();
         groundFixDef.shape = groundShape;
